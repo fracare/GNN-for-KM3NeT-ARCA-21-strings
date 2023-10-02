@@ -4,4 +4,4 @@ This repository contains all the scripts needed to run a track and shower classi
 # Notes:
 
 1. As singularity image for the analysis I used the orcanet_v1.0.4.sif image, details available at https://ml.pages.km3net.de/OrcaNet/index.html#containerization.
-2. The overall size of files used for the analysis exceeded 100GB so I did not uploaed them on github. Abundances are specified in GNN_KM3NeT_ARCA_carenini.pdf. 
+2. The overall size of files used for the analysis exceeded 100GB so I did not uploaded them on github. Abundances are specified in GNN_KM3NeT_ARCA_carenini.pdf. 

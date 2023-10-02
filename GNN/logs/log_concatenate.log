@@ -1,0 +1,53 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Thu Sep 14 16:32:31 CEST 2023
+* Job name:             concatenate.sh
+* Job id:               44553357
+* User:                 fcarenin
+* Account:              km3net
+* Submit host:          cca001
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0343
+****************************************************************
+START
+Checking 8 files ...
+Valid input files: 8/8
+Datasets:	event_info, group_info, x, x_indices, y
+  chunksize:	{'event_info': (227,), 'group_info': (4096,), 'x': (1260, 13), 'x_indices': (4096,), 'y': (80,)}
+  complib:	gzip
+  complevel:	1
+  shuffle:	True
+Creating file track_shower_test.h5
+Processing file 1/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013442.jchain.aashower.118.root_dl.h5
+	Creating dataset 'event_info' with shape (61572,)
+	Creating dataset 'group_info' with shape (61572,)
+	Creating dataset 'x' with shape (59693459, 13)
+	Creating dataset 'x_indices' with shape (61572,)
+	Creating dataset 'y' with shape (61572,)
+Processing file 2/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013757.jchain.aashower.301.root_dl.h5
+Processing file 3/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013306.jchain.aashower.19.root_dl.h5
+Processing file 4/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014165.jchain.aashower.570.root_dl.h5
+Processing file 5/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014166.jchain.aashower.571.root_dl.h5
+Processing file 6/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013495.jchain.aashower.166.root_dl.h5
+Processing file 7/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014182.jchain.aashower.587.root_dl.h5
+Processing file 8/8: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013637.jchain.aashower.234.root_dl.h5
+Adding used files to output
+Copying attributes
+
+Concatenation complete!
+Elapsed time: 2.42 min (18.14 s per file)
+END
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Thu Sep 14 16:35:03 CEST 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 44553357
+Efficiency:
+seff 44553357
+****************************************************************

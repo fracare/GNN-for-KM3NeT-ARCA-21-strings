@@ -1,0 +1,794 @@
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ nodes (InputLayer)             [(None, None, 7)]    0           []                               
+                                                                                                  
+ input.merge_dims (InstanceMeth  (None, 7)           0           ['nodes[0][0]']                  
+ od)                                                                                              
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 7)           28          ['input.merge_dims[0][0]']       
+ alization)                                                                                       
+                                                                                                  
+ input.row_splits (InstanceProp  (None,)             0           ['nodes[0][0]']                  
+ erty)                                                                                            
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 7)     0           ['batch_normalization[0][0]',    
+ s (ClassMethod)                                                  'input.row_splits[0][0]']       
+                                                                                                  
+ coords (InputLayer)            [(None, None, 4)]    0           []                               
+                                                                                                  
+ get_edge_features (GetEdgeFeat  ((None, 16, 7),     0           ['tf.RaggedTensor.from_row_splits
+ ures)                           (None, 16, 7))                  [0][0]',                         
+                                                                  'coords[0][0]']                 
+                                                                                                  
+ subtract (Subtract)            (None, 16, 7)        0           ['get_edge_features[0][0]',      
+                                                                  'get_edge_features[0][1]']      
+                                                                                                  
+ concatenate (Concatenate)      (None, 16, 14)       0           ['get_edge_features[0][0]',      
+                                                                  'subtract[0][0]']               
+                                                                                                  
+ dense (Dense)                  (None, 16, 64)       896         ['concatenate[0][0]']            
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 16, 64)      256         ['dense[0][0]']                  
+ rmalization)                                                                                     
+                                                                                                  
+ activation (Activation)        (None, 16, 64)       0           ['batch_normalization_1[0][0]']  
+                                                                                                  
+ dense_1 (Dense)                (None, 16, 64)       4096        ['activation[0][0]']             
+                                                                                                  
+ batch_normalization_2 (BatchNo  (None, 16, 64)      256         ['dense_1[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_1 (Activation)      (None, 16, 64)       0           ['batch_normalization_2[0][0]']  
+                                                                                                  
+ dense_2 (Dense)                (None, 16, 64)       4096        ['activation_1[0][0]']           
+                                                                                                  
+ input.merge_dims_1 (InstanceMe  (None, 7)           0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           [0][0]']                         
+                                                                                                  
+ batch_normalization_3 (BatchNo  (None, 16, 64)      256         ['dense_2[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dense_3 (Dense)                (None, 64)           448         ['input.merge_dims_1[0][0]']     
+                                                                                                  
+ activation_2 (Activation)      (None, 16, 64)       0           ['batch_normalization_3[0][0]']  
+                                                                                                  
+ batch_normalization_4 (BatchNo  (None, 64)          256         ['dense_3[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ tf.math.reduce_mean (TFOpLambd  (None, 64)          0           ['activation_2[0][0]']           
+ a)                                                                                               
+                                                                                                  
+ tf.__operators__.add (TFOpLamb  (None, 64)          0           ['batch_normalization_4[0][0]',  
+ da)                                                              'tf.math.reduce_mean[0][0]']    
+                                                                                                  
+ activation_3 (Activation)      (None, 64)           0           ['tf.__operators__.add[0][0]']   
+                                                                                                  
+ input.row_splits_1 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         [0][0]']                         
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 64)    0           ['activation_3[0][0]',           
+ s_1 (ClassMethod)                                                'input.row_splits_1[0][0]']     
+                                                                                                  
+ get_edge_features_1 (GetEdgeFe  ((None, 16, 64),    0           ['tf.RaggedTensor.from_row_splits
+ atures)                         (None, 16, 64))                 _1[0][0]',                       
+                                                                  'tf.RaggedTensor.from_row_splits
+                                                                 _1[0][0]']                       
+                                                                                                  
+ subtract_1 (Subtract)          (None, 16, 64)       0           ['get_edge_features_1[0][0]',    
+                                                                  'get_edge_features_1[0][1]']    
+                                                                                                  
+ concatenate_1 (Concatenate)    (None, 16, 128)      0           ['get_edge_features_1[0][0]',    
+                                                                  'subtract_1[0][0]']             
+                                                                                                  
+ dense_4 (Dense)                (None, 16, 128)      16384       ['concatenate_1[0][0]']          
+                                                                                                  
+ batch_normalization_5 (BatchNo  (None, 16, 128)     512         ['dense_4[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_4 (Activation)      (None, 16, 128)      0           ['batch_normalization_5[0][0]']  
+                                                                                                  
+ dense_5 (Dense)                (None, 16, 128)      16384       ['activation_4[0][0]']           
+                                                                                                  
+ batch_normalization_6 (BatchNo  (None, 16, 128)     512         ['dense_5[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_5 (Activation)      (None, 16, 128)      0           ['batch_normalization_6[0][0]']  
+                                                                                                  
+ dense_6 (Dense)                (None, 16, 128)      16384       ['activation_5[0][0]']           
+                                                                                                  
+ input.merge_dims_2 (InstanceMe  (None, 64)          0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           _1[0][0]']                       
+                                                                                                  
+ batch_normalization_7 (BatchNo  (None, 16, 128)     512         ['dense_6[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dense_7 (Dense)                (None, 128)          8192        ['input.merge_dims_2[0][0]']     
+                                                                                                  
+ activation_6 (Activation)      (None, 16, 128)      0           ['batch_normalization_7[0][0]']  
+                                                                                                  
+ batch_normalization_8 (BatchNo  (None, 128)         512         ['dense_7[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ tf.math.reduce_mean_1 (TFOpLam  (None, 128)         0           ['activation_6[0][0]']           
+ bda)                                                                                             
+                                                                                                  
+ tf.__operators__.add_1 (TFOpLa  (None, 128)         0           ['batch_normalization_8[0][0]',  
+ mbda)                                                            'tf.math.reduce_mean_1[0][0]']  
+                                                                                                  
+ activation_7 (Activation)      (None, 128)          0           ['tf.__operators__.add_1[0][0]'] 
+                                                                                                  
+ input.row_splits_2 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         _1[0][0]']                       
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 128)   0           ['activation_7[0][0]',           
+ s_2 (ClassMethod)                                                'input.row_splits_2[0][0]']     
+                                                                                                  
+ get_edge_features_2 (GetEdgeFe  ((None, 16, 128),   0           ['tf.RaggedTensor.from_row_splits
+ atures)                         (None, 16, 128))                _2[0][0]',                       
+                                                                  'tf.RaggedTensor.from_row_splits
+                                                                 _2[0][0]']                       
+                                                                                                  
+ subtract_2 (Subtract)          (None, 16, 128)      0           ['get_edge_features_2[0][0]',    
+                                                                  'get_edge_features_2[0][1]']    
+                                                                                                  
+ concatenate_2 (Concatenate)    (None, 16, 256)      0           ['get_edge_features_2[0][0]',    
+                                                                  'subtract_2[0][0]']             
+                                                                                                  
+ dense_8 (Dense)                (None, 16, 256)      65536       ['concatenate_2[0][0]']          
+                                                                                                  
+ batch_normalization_9 (BatchNo  (None, 16, 256)     1024        ['dense_8[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_8 (Activation)      (None, 16, 256)      0           ['batch_normalization_9[0][0]']  
+                                                                                                  
+ dense_9 (Dense)                (None, 16, 256)      65536       ['activation_8[0][0]']           
+                                                                                                  
+ batch_normalization_10 (BatchN  (None, 16, 256)     1024        ['dense_9[0][0]']                
+ ormalization)                                                                                    
+                                                                                                  
+ activation_9 (Activation)      (None, 16, 256)      0           ['batch_normalization_10[0][0]'] 
+                                                                                                  
+ dense_10 (Dense)               (None, 16, 256)      65536       ['activation_9[0][0]']           
+                                                                                                  
+ input.merge_dims_3 (InstanceMe  (None, 128)         0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           _2[0][0]']                       
+                                                                                                  
+ batch_normalization_11 (BatchN  (None, 16, 256)     1024        ['dense_10[0][0]']               
+ ormalization)                                                                                    
+                                                                                                  
+ dense_11 (Dense)               (None, 256)          32768       ['input.merge_dims_3[0][0]']     
+                                                                                                  
+ activation_10 (Activation)     (None, 16, 256)      0           ['batch_normalization_11[0][0]'] 
+                                                                                                  
+ batch_normalization_12 (BatchN  (None, 256)         1024        ['dense_11[0][0]']               
+ ormalization)                                                                                    
+                                                                                                  
+ tf.math.reduce_mean_2 (TFOpLam  (None, 256)         0           ['activation_10[0][0]']          
+ bda)                                                                                             
+                                                                                                  
+ tf.__operators__.add_2 (TFOpLa  (None, 256)         0           ['batch_normalization_12[0][0]', 
+ mbda)                                                            'tf.math.reduce_mean_2[0][0]']  
+                                                                                                  
+ activation_11 (Activation)     (None, 256)          0           ['tf.__operators__.add_2[0][0]'] 
+                                                                                                  
+ input.row_splits_3 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         _2[0][0]']                       
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 256)   0           ['activation_11[0][0]',          
+ s_3 (ClassMethod)                                                'input.row_splits_3[0][0]']     
+                                                                                                  
+ global_average_pooling1d (Glob  (None, 256)         0           ['tf.RaggedTensor.from_row_splits
+ alAveragePooling1D)                                             _3[0][0]']                       
+                                                                                                  
+ ts_onlynu_output (Dense)       (None, 2)            514         ['global_average_pooling1d[0][0]'
+                                                                 ]                                
+                                                                                                  
+==================================================================================================
+Total params: 303,966
+Trainable params: 300,368
+Non-trainable params: 3,598
+__________________________________________________________________________________________________
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                   Output Shape         Param #     Connected to                     
+==================================================================================================
+ nodes (InputLayer)             [(None, None, 7)]    0           []                               
+                                                                                                  
+ input.merge_dims (InstanceMeth  (None, 7)           0           ['nodes[0][0]']                  
+ od)                                                                                              
+                                                                                                  
+ batch_normalization (BatchNorm  (None, 7)           28          ['input.merge_dims[0][0]']       
+ alization)                                                                                       
+                                                                                                  
+ input.row_splits (InstanceProp  (None,)             0           ['nodes[0][0]']                  
+ erty)                                                                                            
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 7)     0           ['batch_normalization[0][0]',    
+ s (ClassMethod)                                                  'input.row_splits[0][0]']       
+                                                                                                  
+ coords (InputLayer)            [(None, None, 4)]    0           []                               
+                                                                                                  
+ get_edge_features (GetEdgeFeat  ((None, 16, 7),     0           ['tf.RaggedTensor.from_row_splits
+ ures)                           (None, 16, 7))                  [0][0]',                         
+                                                                  'coords[0][0]']                 
+                                                                                                  
+ subtract (Subtract)            (None, 16, 7)        0           ['get_edge_features[0][0]',      
+                                                                  'get_edge_features[0][1]']      
+                                                                                                  
+ concatenate (Concatenate)      (None, 16, 14)       0           ['get_edge_features[0][0]',      
+                                                                  'subtract[0][0]']               
+                                                                                                  
+ dense (Dense)                  (None, 16, 64)       896         ['concatenate[0][0]']            
+                                                                                                  
+ batch_normalization_1 (BatchNo  (None, 16, 64)      256         ['dense[0][0]']                  
+ rmalization)                                                                                     
+                                                                                                  
+ activation (Activation)        (None, 16, 64)       0           ['batch_normalization_1[0][0]']  
+                                                                                                  
+ dense_1 (Dense)                (None, 16, 64)       4096        ['activation[0][0]']             
+                                                                                                  
+ batch_normalization_2 (BatchNo  (None, 16, 64)      256         ['dense_1[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_1 (Activation)      (None, 16, 64)       0           ['batch_normalization_2[0][0]']  
+                                                                                                  
+ dense_2 (Dense)                (None, 16, 64)       4096        ['activation_1[0][0]']           
+                                                                                                  
+ input.merge_dims_1 (InstanceMe  (None, 7)           0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           [0][0]']                         
+                                                                                                  
+ batch_normalization_3 (BatchNo  (None, 16, 64)      256         ['dense_2[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dense_3 (Dense)                (None, 64)           448         ['input.merge_dims_1[0][0]']     
+                                                                                                  
+ activation_2 (Activation)      (None, 16, 64)       0           ['batch_normalization_3[0][0]']  
+                                                                                                  
+ batch_normalization_4 (BatchNo  (None, 64)          256         ['dense_3[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ tf.math.reduce_mean (TFOpLambd  (None, 64)          0           ['activation_2[0][0]']           
+ a)                                                                                               
+                                                                                                  
+ tf.__operators__.add (TFOpLamb  (None, 64)          0           ['batch_normalization_4[0][0]',  
+ da)                                                              'tf.math.reduce_mean[0][0]']    
+                                                                                                  
+ activation_3 (Activation)      (None, 64)           0           ['tf.__operators__.add[0][0]']   
+                                                                                                  
+ input.row_splits_1 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         [0][0]']                         
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 64)    0           ['activation_3[0][0]',           
+ s_1 (ClassMethod)                                                'input.row_splits_1[0][0]']     
+                                                                                                  
+ get_edge_features_1 (GetEdgeFe  ((None, 16, 64),    0           ['tf.RaggedTensor.from_row_splits
+ atures)                         (None, 16, 64))                 _1[0][0]',                       
+                                                                  'tf.RaggedTensor.from_row_splits
+                                                                 _1[0][0]']                       
+                                                                                                  
+ subtract_1 (Subtract)          (None, 16, 64)       0           ['get_edge_features_1[0][0]',    
+                                                                  'get_edge_features_1[0][1]']    
+                                                                                                  
+ concatenate_1 (Concatenate)    (None, 16, 128)      0           ['get_edge_features_1[0][0]',    
+                                                                  'subtract_1[0][0]']             
+                                                                                                  
+ dense_4 (Dense)                (None, 16, 128)      16384       ['concatenate_1[0][0]']          
+                                                                                                  
+ batch_normalization_5 (BatchNo  (None, 16, 128)     512         ['dense_4[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_4 (Activation)      (None, 16, 128)      0           ['batch_normalization_5[0][0]']  
+                                                                                                  
+ dense_5 (Dense)                (None, 16, 128)      16384       ['activation_4[0][0]']           
+                                                                                                  
+ batch_normalization_6 (BatchNo  (None, 16, 128)     512         ['dense_5[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_5 (Activation)      (None, 16, 128)      0           ['batch_normalization_6[0][0]']  
+                                                                                                  
+ dense_6 (Dense)                (None, 16, 128)      16384       ['activation_5[0][0]']           
+                                                                                                  
+ input.merge_dims_2 (InstanceMe  (None, 64)          0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           _1[0][0]']                       
+                                                                                                  
+ batch_normalization_7 (BatchNo  (None, 16, 128)     512         ['dense_6[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ dense_7 (Dense)                (None, 128)          8192        ['input.merge_dims_2[0][0]']     
+                                                                                                  
+ activation_6 (Activation)      (None, 16, 128)      0           ['batch_normalization_7[0][0]']  
+                                                                                                  
+ batch_normalization_8 (BatchNo  (None, 128)         512         ['dense_7[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ tf.math.reduce_mean_1 (TFOpLam  (None, 128)         0           ['activation_6[0][0]']           
+ bda)                                                                                             
+                                                                                                  
+ tf.__operators__.add_1 (TFOpLa  (None, 128)         0           ['batch_normalization_8[0][0]',  
+ mbda)                                                            'tf.math.reduce_mean_1[0][0]']  
+                                                                                                  
+ activation_7 (Activation)      (None, 128)          0           ['tf.__operators__.add_1[0][0]'] 
+                                                                                                  
+ input.row_splits_2 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         _1[0][0]']                       
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 128)   0           ['activation_7[0][0]',           
+ s_2 (ClassMethod)                                                'input.row_splits_2[0][0]']     
+                                                                                                  
+ get_edge_features_2 (GetEdgeFe  ((None, 16, 128),   0           ['tf.RaggedTensor.from_row_splits
+ atures)                         (None, 16, 128))                _2[0][0]',                       
+                                                                  'tf.RaggedTensor.from_row_splits
+                                                                 _2[0][0]']                       
+                                                                                                  
+ subtract_2 (Subtract)          (None, 16, 128)      0           ['get_edge_features_2[0][0]',    
+                                                                  'get_edge_features_2[0][1]']    
+                                                                                                  
+ concatenate_2 (Concatenate)    (None, 16, 256)      0           ['get_edge_features_2[0][0]',    
+                                                                  'subtract_2[0][0]']             
+                                                                                                  
+ dense_8 (Dense)                (None, 16, 256)      65536       ['concatenate_2[0][0]']          
+                                                                                                  
+ batch_normalization_9 (BatchNo  (None, 16, 256)     1024        ['dense_8[0][0]']                
+ rmalization)                                                                                     
+                                                                                                  
+ activation_8 (Activation)      (None, 16, 256)      0           ['batch_normalization_9[0][0]']  
+                                                                                                  
+ dense_9 (Dense)                (None, 16, 256)      65536       ['activation_8[0][0]']           
+                                                                                                  
+ batch_normalization_10 (BatchN  (None, 16, 256)     1024        ['dense_9[0][0]']                
+ ormalization)                                                                                    
+                                                                                                  
+ activation_9 (Activation)      (None, 16, 256)      0           ['batch_normalization_10[0][0]'] 
+                                                                                                  
+ dense_10 (Dense)               (None, 16, 256)      65536       ['activation_9[0][0]']           
+                                                                                                  
+ input.merge_dims_3 (InstanceMe  (None, 128)         0           ['tf.RaggedTensor.from_row_splits
+ thod)                                                           _2[0][0]']                       
+                                                                                                  
+ batch_normalization_11 (BatchN  (None, 16, 256)     1024        ['dense_10[0][0]']               
+ ormalization)                                                                                    
+                                                                                                  
+ dense_11 (Dense)               (None, 256)          32768       ['input.merge_dims_3[0][0]']     
+                                                                                                  
+ activation_10 (Activation)     (None, 16, 256)      0           ['batch_normalization_11[0][0]'] 
+                                                                                                  
+ batch_normalization_12 (BatchN  (None, 256)         1024        ['dense_11[0][0]']               
+ ormalization)                                                                                    
+                                                                                                  
+ tf.math.reduce_mean_2 (TFOpLam  (None, 256)         0           ['activation_10[0][0]']          
+ bda)                                                                                             
+                                                                                                  
+ tf.__operators__.add_2 (TFOpLa  (None, 256)         0           ['batch_normalization_12[0][0]', 
+ mbda)                                                            'tf.math.reduce_mean_2[0][0]']  
+                                                                                                  
+ activation_11 (Activation)     (None, 256)          0           ['tf.__operators__.add_2[0][0]'] 
+                                                                                                  
+ input.row_splits_3 (InstancePr  (None,)             0           ['tf.RaggedTensor.from_row_splits
+ operty)                                                         _2[0][0]']                       
+                                                                                                  
+ tf.RaggedTensor.from_row_split  (None, None, 256)   0           ['activation_11[0][0]',          
+ s_3 (ClassMethod)                                                'input.row_splits_3[0][0]']     
+                                                                                                  
+ global_average_pooling1d (Glob  (None, 256)         0           ['tf.RaggedTensor.from_row_splits
+ alAveragePooling1D)                                             _3[0][0]']                       
+                                                                                                  
+ ts_output (Dense)              (None, 2)            514         ['global_average_pooling1d[0][0]'
+                                                                 ]                                
+                                                                                                  
+==================================================================================================
+Total params: 303,966
+Trainable params: 300,368
+Non-trainable params: 3,598
+__________________________________________________________________________________________________
+------------------------------------------------------------
+------------------- 2023-09-07  20:26:08 -------------------
+---------- orcanet version 1.0.4
+
+Training run started with the following configuration:
+
+Output folder:	/sps/km3net/users/fcarenin/GNN/ARCA21/ts_onlynu_corrected/with16neighb/
+List file path:	/sps/km3net/users/fcarenin/GNN/ARCA21/ts_onlynu_corrected/with16neighb/scripts/listARCA21.toml
+
+Given trainfiles in the .list file:
+ points:
+	/sps/km3net/users/fcarenin/GNN/scripts/orcasong/muon_and_nu_shuffled.h5
+
+Given validation files in the .list file:
+ points:
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5
+	/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid/mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+
+Settings used:
+   batchsize:	32
+   callback_train:	[]
+   class_weight:	None
+   cleanup_models:	False
+   custom_objects:	{}
+   dataset_modifier:	None
+   fixed_batchsize:	False
+   key_x_values:	x
+   key_y_values:	y
+   label_modifier:	<orcanet.lib.label_modifiers.TSClassifier object at 0x2afd23be3cd0>
+   learning_rate:	[0.003, 0.001]
+   make_weight_plots:	False
+   max_queue_size:	10
+   multi_gpu:	True
+   n_events:	None
+   sample_modifier:	<orcanet.lib.sample_modifiers.GraphEdgeConv object at 0x2afd211e2280>
+   shuffle_train:	True
+   train_logger_display:	200
+   train_logger_flush:	-1
+   use_scratch_ssd:	False
+   validate_interval:	1
+   verbose_train:	1
+   verbose_val:	0
+   y_field_names:	None
+   zero_center_folder:	None
+
+Training in epoch 1 on file 1/1
+-------------------------------
+Learning rate is at 0.003000000026077032
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	656.94 min
+	Per batch:	3122.1 ms
+Statistics of data readout:
+	Total time:	21.76 min
+	Per batch:	103.4 ms
+Training results:
+   loss: 	0.5921767950057983
+   acc: 	0.6875
+Elapsed time: 10:57:42
+Saved model to: saved_models/model_epoch_1_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.428077798959981
+   acc: 	0.8258912886020198
+Elapsed time: 1:32:50
+
+Training in epoch 2 on file 1/1
+-------------------------------
+Learning rate is at 0.002997000003233552
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	655.02 min
+	Per batch:	3113.0 ms
+Statistics of data readout:
+	Total time:	19.73 min
+	Per batch:	93.748 ms
+Training results:
+   loss: 	0.2894151210784912
+   acc: 	0.875
+Elapsed time: 10:55:39
+Saved model to: saved_models/model_epoch_2_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.3349241996823079
+   acc: 	0.8807552797034442
+Elapsed time: 1:32:52
+
+Training in epoch 3 on file 1/1
+-------------------------------
+Learning rate is at 0.0029940030071884394
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	654.37 min
+	Per batch:	3109.9 ms
+Statistics of data readout:
+	Total time:	18.75 min
+	Per batch:	89.089 ms
+Training results:
+   loss: 	0.34910863637924194
+   acc: 	0.84375
+Elapsed time: 10:55:03
+Saved model to: saved_models/model_epoch_3_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.5252596882347804
+   acc: 	0.8535683969691455
+Elapsed time: 1:32:53
+
+Training in epoch 4 on file 1/1
+-------------------------------
+Learning rate is at 0.0029910090379416943
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	653.47 min
+	Per batch:	3105.6 ms
+Statistics of data readout:
+	Total time:	17.87 min
+	Per batch:	84.927 ms
+Training results:
+   loss: 	0.26417890191078186
+   acc: 	0.90625
+Elapsed time: 10:54:09
+Saved model to: saved_models/model_epoch_4_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.312389858060624
+   acc: 	0.8941283861536429
+Elapsed time: 1:32:51
+
+Training in epoch 5 on file 1/1
+-------------------------------
+Learning rate is at 0.0029880180954933167
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	651.36 min
+	Per batch:	3095.6 ms
+Statistics of data readout:
+	Total time:	15.86 min
+	Per batch:	75.357 ms
+Training results:
+   loss: 	0.32855308055877686
+   acc: 	0.90625
+Elapsed time: 10:51:50
+Saved model to: saved_models/model_epoch_5_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.28637850344394783
+   acc: 	0.9030238565686214
+Elapsed time: 1:32:51
+
+Training in epoch 6 on file 1/1
+-------------------------------
+Learning rate is at 0.002985029947012663
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	651.10 min
+	Per batch:	3094.3 ms
+Statistics of data readout:
+	Total time:	15.46 min
+	Per batch:	73.452 ms
+Training results:
+   loss: 	0.1178174838423729
+   acc: 	0.9375
+Elapsed time: 10:51:37
+Saved model to: saved_models/model_epoch_6_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.35941091238122536
+   acc: 	0.850586014425612
+Elapsed time: 1:32:54
+
+Training in epoch 7 on file 1/1
+-------------------------------
+Learning rate is at 0.0029820448253303766
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	651.19 min
+	Per batch:	3094.8 ms
+Statistics of data readout:
+	Total time:	15.53 min
+	Per batch:	73.815 ms
+Training results:
+   loss: 	0.24079830944538116
+   acc: 	0.90625
+Elapsed time: 10:51:43
+Saved model to: saved_models/model_epoch_7_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.2506435117868788
+   acc: 	0.9154213977933405
+Elapsed time: 1:32:51
+
+Training in epoch 8 on file 1/1
+-------------------------------
+Learning rate is at 0.0029790629632771015
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	652.63 min
+	Per batch:	3101.6 ms
+Statistics of data readout:
+	Total time:	17.24 min
+	Per batch:	81.937 ms
+Training results:
+   loss: 	0.1422693431377411
+   acc: 	0.9375
+Elapsed time: 10:53:07
+Saved model to: saved_models/model_epoch_8_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.2728025212644106
+   acc: 	0.9015641861123393
+Elapsed time: 1:32:46
+
+Training in epoch 9 on file 1/1
+-------------------------------
+Learning rate is at 0.0029760838951915503
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	653.35 min
+	Per batch:	3105.0 ms
+Statistics of data readout:
+	Total time:	18.03 min
+	Per batch:	85.694 ms
+Training results:
+   loss: 	0.1886540949344635
+   acc: 	0.9375
+Elapsed time: 10:53:57
+Saved model to: saved_models/model_epoch_9_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.3418628514425688
+   acc: 	0.8646149061998998
+Elapsed time: 1:32:47
+
+Training in epoch 10 on file 1/1
+--------------------------------
+Learning rate is at 0.0029731078539043665
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	651.88 min
+	Per batch:	3098.0 ms
+Statistics of data readout:
+	Total time:	16.56 min
+	Per batch:	78.672 ms
+Training results:
+   loss: 	0.24724584817886353
+   acc: 	0.875
+Elapsed time: 10:52:21
+Saved model to: saved_models/model_epoch_10_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.24654565779336418
+   acc: 	0.9147477746684237
+Elapsed time: 1:32:47
+
+Training in epoch 11 on file 1/1
+--------------------------------
+Learning rate is at 0.0029701346065849066
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	651.16 min
+	Per batch:	3094.6 ms
+Statistics of data readout:
+	Total time:	15.70 min
+	Per batch:	74.617 ms
+Training results:
+   loss: 	0.16843801736831665
+   acc: 	0.9375
+Elapsed time: 10:51:37
+Saved model to: saved_models/model_epoch_11_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.25903312814045715
+   acc: 	0.910123474195184
+Elapsed time: 1:32:47
+
+Training in epoch 12 on file 1/1
+--------------------------------
+Learning rate is at 0.002967164618894458
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	654.10 min
+	Per batch:	3108.6 ms
+Statistics of data readout:
+	Total time:	18.20 min
+	Per batch:	86.499 ms
+Training results:
+   loss: 	0.338483989238739
+   acc: 	0.875
+Elapsed time: 10:54:41
+Saved model to: saved_models/model_epoch_12_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.5034279512698907
+   acc: 	0.7408322131633758
+Elapsed time: 1:33:00
+
+Training in epoch 13 on file 1/1
+--------------------------------
+Learning rate is at 0.002964197425171733
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+Statistics of model calculations:
+	Total time:	655.19 min
+	Per batch:	3113.8 ms
+Statistics of data readout:
+	Total time:	19.21 min
+	Per batch:	91.276 ms
+Training results:
+   loss: 	0.16414044797420502
+   acc: 	0.90625
+Elapsed time: 10:55:49
+Saved model to: saved_models/model_epoch_13_file_1.h5
+
+Validation
+----------
+Inputs and files:
+   points:	mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013429.jchain.aashower.105.root_dl.h5, mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013726.jchain.aashower.290.root_dl.h5, mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013307.jchain.aashower.20.root_dl.h5, mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014170.jchain.aashower.575.root_dl.h5, mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014113.jchain.aashower.534.root_dl.h5, mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014046.jchain.aashower.484.root_dl.h5, mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014059.jchain.aashower.497.root_dl.h5, mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013639.jchain.aashower.235.root_dl.h5
+Validation results:
+   loss: 	0.2209616852623533
+   acc: 	0.9229893211644009
+Elapsed time: 1:32:55
+
+Training in epoch 14 on file 1/1
+--------------------------------
+Learning rate is at 0.0029612332582473755
+Inputs and files:
+   points: 	muon_and_nu_shuffled.h5
+
+Prediction completed on file ARCA21_TS.h5
+Statistics of model prediction:
+	Total time:	83.34 min
+	Per batch:	2597.8 ms
+Statistics of data readout:
+	Total time:	1.33 min
+	Per batch:	41.407 ms
+
+Prediction completed on file ARCA21_TS_with_muons.h5
+Statistics of model prediction:
+	Total time:	93.89 min
+	Per batch:	1702.5 ms
+Statistics of data readout:
+	Total time:	1.85 min
+	Per batch:	33.539 ms

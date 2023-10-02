@@ -1,0 +1,24 @@
+[points]
+
+train_files = [
+"/sps/km3net/users/fcarenin/GNN/scripts/orcasong/muon_and_nu_shuffled.h5",
+]
+
+
+validation_files = [
+"/sps/km3net/users/fcarenin/GNN/root_files/h5_to_root_dlh5_valid",
+]
+
+#inference_files = [
+#"/sps/km3net/users/nvanderm/ML_project/MC_inference_files/anueCC_1/",
+#]
+
+
+
+
+
+
+
+
+
+

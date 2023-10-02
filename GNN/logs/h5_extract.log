@@ -1,0 +1,97 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Sun Sep 17 15:53:10 CEST 2023
+* Job name:             h5extract_all.sh
+* Job id:               45030751
+* User:                 fcarenin
+* Account:              km3net
+* Submit host:          cca001
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0177
+****************************************************************
+mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013886.jchain.aashower.375.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 101.3 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013886.jchain.aashower.375.root.h5.prov.json'
+mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013837.jchain.aashower.356.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 27.3 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013837.jchain.aashower.356.root.h5.prov.json'
+mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013305.jchain.aashower.18.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 61.7 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013305.jchain.aashower.18.root.h5.prov.json'
+mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013807.jchain.aashower.332.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 25.6 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013807.jchain.aashower.332.root.h5.prov.json'
+mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014187.jchain.aashower.592.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 107.8 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014187.jchain.aashower.592.root.h5.prov.json'
+mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014012.jchain.aashower.481.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 30.1 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014012.jchain.aashower.481.root.h5.prov.json'
+mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013532.jchain.aashower.203.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 62.1 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013532.jchain.aashower.203.root.h5.prov.json'
+mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014109.jchain.aashower.530.root
+Processing header
+Processing event_info
+Processing tracks
+Processing hits
+Processing mc_hits
+Processing mc_tracks
+Completed in 29.7 s
+Provenance information has been written to '/sps/km3net/users/fcarenin/GNN/root_files_test_double_valid/root/mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014109.jchain.aashower.530.root.h5.prov.json'
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Sun Sep 17 16:01:13 CEST 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 45030751
+Efficiency:
+seff 45030751
+****************************************************************

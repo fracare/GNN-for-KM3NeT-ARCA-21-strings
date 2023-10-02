@@ -1,0 +1,53 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Tue Sep 26 16:55:46 CEST 2023
+* Job name:             ARCA21
+* Job id:               46236711
+* User:                 fcarenin
+* Account:              km3net
+* Submit host:          cca011
+* Partition:            gpu
+* Quality of service:   gpu
+* Nodelist:             ccwgslurm0113
+****************************************************************
+INFO:    underlay of /usr/bin/nvidia-smi required more than 50 (478) bind mounts
+2023-09-26 15:55:58.917185: I tensorflow/core/platform/cpu_feature_guard.cc:151] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-09-26 15:56:01.745478: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 30973 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:3b:00.0, compute capability: 7.0
+Automatically set epoch to epoch 13 file 1.
+Loading saved model: saved_models/model_epoch_13_file_1.h5
+Creating temporary file /sps/km3net/users/fcarenin/GNN/temp_ARCA21_TS_with_muons.h5_26-09-2023-14-56-06
+Predicting in step 0/3309 (0.00%)
+Predicting in step 300/3309 (9.07%)
+Predicting in step 600/3309 (18.13%)
+Predicting in step 900/3309 (27.20%)
+Predicting in step 1200/3309 (36.26%)
+Predicting in step 1500/3309 (45.33%)
+Predicting in step 1800/3309 (54.40%)
+Predicting in step 2100/3309 (63.46%)
+Predicting in step 2400/3309 (72.53%)
+Predicting in step 2700/3309 (81.60%)
+Predicting in step 3000/3309 (90.66%)
+Predicting in step 3300/3309 (99.73%)
+
+Prediction completed on file ARCA21_TS_with_muons.h5
+Statistics of model prediction:
+	Total time:	93.89 min
+	Per batch:	1702.5 ms
+Statistics of data readout:
+	Total time:	1.85 min
+	Per batch:	33.539 ms
+Finished inference in 96.31666666666666 min
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Tue Sep 26 18:32:31 CEST 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 46236711
+Efficiency:
+seff 46236711
+****************************************************************

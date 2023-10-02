@@ -1,0 +1,441 @@
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+* Date:                 Sun Sep 17 16:05:48 CEST 2023
+* Job name:             extract.sh
+* Job id:               45032130
+* User:                 fcarenin
+* Account:              km3net
+* Submit host:          cca012
+* Partition:            htc
+* Quality of service:   normal
+* Nodelist:             ccwslurm0342
+****************************************************************
+START
+Processing file: mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013886.jchain.aashower.375.root.h5
+Pipeline and module initialisation took 0.028s (CPU 0.013s).
+2023-09-17 16:06:16 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:06:16 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    5000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    6000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    7000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    8000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    9000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob   10000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob   11000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob   12000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob   13000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:09:53 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013886.jchain.aashower.375.root_dl.h5
+============================================================
+13222 cycles drained in 3.927873min (CPU 3.716415min). Memory peak: 474.23 MB
+  wall  mean: 0.017791s  medi: 0.010019s  min: 0.007671s  max: 18.057781s  std: 0.161881s
+  CPU   mean: 0.016833s  medi: 0.009976s  min: 0.007662s  max: 16.376421s  std: 0.147311s
+StatusBar - process: 0.001s (CPU 0.001s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000052s  medi: 0.000055s  min: 0.000032s  max: 0.000080s  std: 0.000018s
+  CPU   mean: 0.000052s  medi: 0.000056s  min: 0.000032s  max: 0.000081s  std: 0.000018s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000035s  medi: 0.000040s  min: 0.000024s  max: 0.000049s  std: 0.000009s
+  CPU   mean: 0.000037s  medi: 0.000041s  min: 0.000024s  max: 0.000050s  std: 0.000009s
+HDF5Pump - process: 46.062s (CPU 44.375s) - finish: 0.004s (CPU 0.003s)
+  wall  mean: 0.003484s  medi: 0.001825s  min: 0.000907s  max: 17.971019s  std: 0.156280s
+  CPU   mean: 0.003356s  medi: 0.001825s  min: 0.000908s  max: 16.293237s  std: 0.141691s
+MCTimeCorrector - process: 61.335s (CPU 61.285s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.004639s  medi: 0.000653s  min: 0.000141s  max: 0.727523s  std: 0.019976s
+  CPU   mean: 0.004635s  medi: 0.000653s  min: 0.000142s  max: 0.726118s  std: 0.019950s
+TimePreproc - process: 1.902s (CPU 1.912s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000144s  medi: 0.000116s  min: 0.000096s  max: 0.002872s  std: 0.000098s
+  CPU   mean: 0.000145s  medi: 0.000117s  min: 0.000097s  max: 0.001931s  std: 0.000095s
+PointMaker - process: 19.987s (CPU 19.982s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001512s  medi: 0.001377s  min: 0.001279s  max: 0.006198s  std: 0.000395s
+  CPU   mean: 0.001511s  medi: 0.001376s  min: 0.001280s  max: 0.006177s  std: 0.000394s
+McInfoMaker - process: 14.121s (CPU 14.120s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001068s  medi: 0.001017s  min: 0.000917s  max: 0.004039s  std: 0.000170s
+  CPU   mean: 0.001068s  medi: 0.001017s  min: 0.000918s  max: 0.004048s  std: 0.000170s
+Keep - process: 0.424s (CPU 0.428s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000032s  medi: 0.000030s  min: 0.000025s  max: 0.000245s  std: 0.000008s
+  CPU   mean: 0.000032s  medi: 0.000030s  min: 0.000025s  max: 0.000245s  std: 0.000008s
+HDF5Sink - process: 90.389s (CPU 79.596s) - finish: 0.373s (CPU 0.372s)
+  wall  mean: 0.006836s  medi: 0.004837s  min: 0.004027s  max: 1.035718s  std: 0.032416s
+  CPU   mean: 0.006020s  medi: 0.004831s  min: 0.004029s  max: 1.034263s  std: 0.030481s
+Processing file: mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013837.jchain.aashower.356.root.h5
+Pipeline and module initialisation took 0.023s (CPU 0.010s).
+2023-09-17 16:09:58 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:09:58 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:11:23 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013837.jchain.aashower.356.root_dl.h5
+============================================================
+4341 cycles drained in 89.141491s (CPU 67.999884s). Memory peak: 474.23 MB
+  wall  mean: 0.020436s  medi: 0.010974s  min: 0.007902s  max: 4.253819s  std: 0.083365s
+  CPU   mean: 0.015570s  medi: 0.010728s  min: 0.007887s  max: 3.865798s  std: 0.066786s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000051s  medi: 0.000049s  min: 0.000033s  max: 0.000074s  std: 0.000017s
+  CPU   mean: 0.000052s  medi: 0.000050s  min: 0.000034s  max: 0.000074s  std: 0.000017s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000033s  medi: 0.000030s  min: 0.000026s  max: 0.000046s  std: 0.000008s
+  CPU   mean: 0.000033s  medi: 0.000031s  min: 0.000026s  max: 0.000046s  std: 0.000008s
+HDF5Pump - process: 13.248s (CPU 12.858s) - finish: 0.003s (CPU 0.002s)
+  wall  mean: 0.003052s  medi: 0.001805s  min: 0.000944s  max: 4.205065s  std: 0.063804s
+  CPU   mean: 0.002962s  medi: 0.001805s  min: 0.000945s  max: 3.817100s  std: 0.057918s
+MCTimeCorrector - process: 15.413s (CPU 15.403s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.003550s  medi: 0.000607s  min: 0.000163s  max: 0.242760s  std: 0.012785s
+  CPU   mean: 0.003548s  medi: 0.000606s  min: 0.000164s  max: 0.242597s  std: 0.012776s
+TimePreproc - process: 0.615s (CPU 0.619s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000142s  medi: 0.000125s  min: 0.000095s  max: 0.001192s  std: 0.000068s
+  CPU   mean: 0.000143s  medi: 0.000126s  min: 0.000096s  max: 0.001195s  std: 0.000068s
+PointMaker - process: 6.661s (CPU 6.661s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001535s  medi: 0.001415s  min: 0.001276s  max: 0.004719s  std: 0.000302s
+  CPU   mean: 0.001534s  medi: 0.001415s  min: 0.001278s  max: 0.004722s  std: 0.000301s
+McInfoMaker - process: 4.773s (CPU 4.775s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001100s  medi: 0.001038s  min: 0.000927s  max: 0.002232s  std: 0.000127s
+  CPU   mean: 0.001100s  medi: 0.001038s  min: 0.000929s  max: 0.002234s  std: 0.000126s
+Keep - process: 0.142s (CPU 0.143s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000033s  medi: 0.000032s  min: 0.000025s  max: 0.000080s  std: 0.000005s
+  CPU   mean: 0.000033s  medi: 0.000032s  min: 0.000025s  max: 0.000069s  std: 0.000005s
+HDF5Sink - process: 47.514s (CPU 26.830s) - finish: 0.390s (CPU 0.389s)
+  wall  mean: 0.010945s  medi: 0.005073s  min: 0.004139s  max: 2.642654s  std: 0.051077s
+  CPU   mean: 0.006181s  medi: 0.005042s  min: 0.004141s  max: 1.141129s  std: 0.028881s
+Processing file: mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013305.jchain.aashower.18.root.h5
+Pipeline and module initialisation took 0.028s (CPU 0.009s).
+2023-09-17 16:11:32 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:11:32 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    5000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    6000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    7000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    8000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    9000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:14:01 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anumu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013305.jchain.aashower.18.root_dl.h5
+============================================================
+9275 cycles drained in 157.500911s (CPU 140.882650s). Memory peak: 474.23 MB
+  wall  mean: 0.016934s  medi: 0.009940s  min: 0.007911s  max: 8.855451s  std: 0.098826s
+  CPU   mean: 0.015145s  medi: 0.009914s  min: 0.007892s  max: 8.264422s  std: 0.092112s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000050s  medi: 0.000041s  min: 0.000033s  max: 0.000082s  std: 0.000017s
+  CPU   mean: 0.000051s  medi: 0.000041s  min: 0.000034s  max: 0.000083s  std: 0.000017s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000036s  medi: 0.000033s  min: 0.000024s  max: 0.000062s  std: 0.000012s
+  CPU   mean: 0.000037s  medi: 0.000034s  min: 0.000024s  max: 0.000063s  std: 0.000012s
+HDF5Pump - process: 27.575s (CPU 26.981s) - finish: 0.003s (CPU 0.002s)
+  wall  mean: 0.002973s  medi: 0.001722s  min: 0.000958s  max: 8.807474s  std: 0.091441s
+  CPU   mean: 0.002909s  medi: 0.001720s  min: 0.000959s  max: 8.216480s  std: 0.085306s
+MCTimeCorrector - process: 32.393s (CPU 32.370s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.003492s  medi: 0.000545s  min: 0.000146s  max: 0.265990s  std: 0.013207s
+  CPU   mean: 0.003490s  medi: 0.000546s  min: 0.000147s  max: 0.265804s  std: 0.013195s
+TimePreproc - process: 1.272s (CPU 1.281s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000137s  medi: 0.000117s  min: 0.000098s  max: 0.001249s  std: 0.000071s
+  CPU   mean: 0.000138s  medi: 0.000118s  min: 0.000099s  max: 0.001252s  std: 0.000071s
+PointMaker - process: 13.628s (CPU 13.628s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001469s  medi: 0.001377s  min: 0.001294s  max: 0.004442s  std: 0.000298s
+  CPU   mean: 0.001469s  medi: 0.001376s  min: 0.001295s  max: 0.004424s  std: 0.000298s
+McInfoMaker - process: 9.823s (CPU 9.825s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001059s  medi: 0.001023s  min: 0.000941s  max: 0.002333s  std: 0.000105s
+  CPU   mean: 0.001059s  medi: 0.001023s  min: 0.000942s  max: 0.002299s  std: 0.000105s
+Keep - process: 0.290s (CPU 0.293s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000031s  medi: 0.000030s  min: 0.000026s  max: 0.000212s  std: 0.000005s
+  CPU   mean: 0.000032s  medi: 0.000030s  min: 0.000026s  max: 0.000212s  std: 0.000005s
+HDF5Sink - process: 71.360s (CPU 55.473s) - finish: 0.387s (CPU 0.386s)
+  wall  mean: 0.007694s  medi: 0.004886s  min: 0.004112s  max: 1.002499s  std: 0.033244s
+  CPU   mean: 0.005981s  medi: 0.004884s  min: 0.004113s  max: 1.001037s  std: 0.030130s
+Processing file: mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013807.jchain.aashower.332.root.h5
+Pipeline and module initialisation took 0.019s (CPU 0.009s).
+2023-09-17 16:14:04 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:14:04 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 474.230 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:15:02 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_anumu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00013807.jchain.aashower.332.root_dl.h5
+============================================================
+4235 cycles drained in 60.832157s (CPU 58.440928s). Memory peak: 474.23 MB
+  wall  mean: 0.014291s  medi: 0.009831s  min: 0.007941s  max: 3.480326s  std: 0.061830s
+  CPU   mean: 0.013730s  medi: 0.009736s  min: 0.007942s  max: 3.215310s  std: 0.058093s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000052s  medi: 0.000043s  min: 0.000036s  max: 0.000084s  std: 0.000019s
+  CPU   mean: 0.000052s  medi: 0.000044s  min: 0.000037s  max: 0.000085s  std: 0.000019s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000031s  medi: 0.000025s  min: 0.000025s  max: 0.000048s  std: 0.000010s
+  CPU   mean: 0.000032s  medi: 0.000026s  min: 0.000026s  max: 0.000049s  std: 0.000010s
+HDF5Pump - process: 11.350s (CPU 11.083s) - finish: 0.002s (CPU 0.002s)
+  wall  mean: 0.002680s  medi: 0.001697s  min: 0.000944s  max: 3.422307s  std: 0.052568s
+  CPU   mean: 0.002617s  medi: 0.001698s  min: 0.000946s  max: 3.157431s  std: 0.048500s
+MCTimeCorrector - process: 11.598s (CPU 11.591s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.002739s  medi: 0.000574s  min: 0.000159s  max: 0.279623s  std: 0.010149s
+  CPU   mean: 0.002737s  medi: 0.000574s  min: 0.000160s  max: 0.279460s  std: 0.010140s
+TimePreproc - process: 0.552s (CPU 0.556s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000130s  medi: 0.000115s  min: 0.000096s  max: 0.001889s  std: 0.000060s
+  CPU   mean: 0.000131s  medi: 0.000116s  min: 0.000097s  max: 0.001895s  std: 0.000060s
+PointMaker - process: 5.981s (CPU 5.981s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001412s  medi: 0.001375s  min: 0.001306s  max: 0.003794s  std: 0.000187s
+  CPU   mean: 0.001412s  medi: 0.001375s  min: 0.001308s  max: 0.003798s  std: 0.000187s
+McInfoMaker - process: 4.336s (CPU 4.337s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001024s  medi: 0.001014s  min: 0.000943s  max: 0.001674s  std: 0.000043s
+  CPU   mean: 0.001024s  medi: 0.001014s  min: 0.000944s  max: 0.001426s  std: 0.000041s
+Keep - process: 0.130s (CPU 0.131s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000031s  medi: 0.000029s  min: 0.000026s  max: 0.000231s  std: 0.000006s
+  CPU   mean: 0.000031s  medi: 0.000030s  min: 0.000026s  max: 0.000232s  std: 0.000006s
+HDF5Sink - process: 26.260s (CPU 24.196s) - finish: 0.275s (CPU 0.274s)
+  wall  mean: 0.006201s  medi: 0.004843s  min: 0.004073s  max: 0.881798s  std: 0.026928s
+  CPU   mean: 0.005713s  medi: 0.004828s  min: 0.004075s  max: 0.874430s  std: 0.026402s
+Processing file: mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014187.jchain.aashower.592.root.h5
+Pipeline and module initialisation took 0.026s (CPU 0.012s).
+2023-09-17 16:15:16 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:15:16 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    5000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    6000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    7000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    8000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    9000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob   10000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob   11000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob   12000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob   13000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:19:03 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_nue-CCHEDIS_1e2-1e8GeV.sirene.jterbr00014187.jchain.aashower.592.root_dl.h5
+============================================================
+13485 cycles drained in 4.020809min (CPU 3.710900min). Memory peak: 588.14 MB
+  wall  mean: 0.017836s  medi: 0.010243s  min: 0.007876s  max: 13.907165s  std: 0.125615s
+  CPU   mean: 0.016459s  medi: 0.010208s  min: 0.007854s  max: 13.030566s  std: 0.117703s
+StatusBar - process: 0.001s (CPU 0.001s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000047s  medi: 0.000041s  min: 0.000031s  max: 0.000078s  std: 0.000015s
+  CPU   mean: 0.000048s  medi: 0.000042s  min: 0.000031s  max: 0.000079s  std: 0.000015s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000031s  medi: 0.000027s  min: 0.000024s  max: 0.000048s  std: 0.000008s
+  CPU   mean: 0.000032s  medi: 0.000027s  min: 0.000025s  max: 0.000048s  std: 0.000008s
+HDF5Pump - process: 42.505s (CPU 41.702s) - finish: 0.003s (CPU 0.002s)
+  wall  mean: 0.003152s  medi: 0.001864s  min: 0.000958s  max: 13.775573s  std: 0.118622s
+  CPU   mean: 0.003092s  medi: 0.001864s  min: 0.000954s  max: 12.977114s  std: 0.111747s
+MCTimeCorrector - process: 61.108s (CPU 61.066s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.004532s  medi: 0.000660s  min: 0.000165s  max: 0.420034s  std: 0.017025s
+  CPU   mean: 0.004528s  medi: 0.000661s  min: 0.000167s  max: 0.419638s  std: 0.017010s
+TimePreproc - process: 1.941s (CPU 1.956s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000144s  medi: 0.000119s  min: 0.000098s  max: 0.001631s  std: 0.000083s
+  CPU   mean: 0.000145s  medi: 0.000120s  min: 0.000099s  max: 0.001635s  std: 0.000084s
+PointMaker - process: 20.194s (CPU 20.192s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001498s  medi: 0.001395s  min: 0.001286s  max: 0.120425s  std: 0.001070s
+  CPU   mean: 0.001497s  medi: 0.001394s  min: 0.001288s  max: 0.120310s  std: 0.001069s
+McInfoMaker - process: 14.411s (CPU 14.414s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001069s  medi: 0.001038s  min: 0.000954s  max: 0.004445s  std: 0.000101s
+  CPU   mean: 0.001069s  medi: 0.001038s  min: 0.000955s  max: 0.004454s  std: 0.000101s
+Keep - process: 0.430s (CPU 0.435s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000032s  medi: 0.000030s  min: 0.000025s  max: 0.000364s  std: 0.000006s
+  CPU   mean: 0.000032s  medi: 0.000031s  min: 0.000026s  max: 0.000278s  std: 0.000005s
+HDF5Sink - process: 98.858s (CPU 81.272s) - finish: 0.662s (CPU 0.660s)
+  wall  mean: 0.007331s  medi: 0.004948s  min: 0.004091s  max: 1.165951s  std: 0.033024s
+  CPU   mean: 0.006027s  medi: 0.004945s  min: 0.004077s  max: 1.010587s  std: 0.030363s
+Processing file: mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014012.jchain.aashower.481.root.h5
+Pipeline and module initialisation took 0.023s (CPU 0.009s).
+2023-09-17 16:19:08 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:19:08 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:20:15 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_nue-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014012.jchain.aashower.481.root_dl.h5
+============================================================
+4736 cycles drained in 71.630874s (CPU 69.160978s). Memory peak: 588.14 MB
+  wall  mean: 0.014954s  medi: 0.009954s  min: 0.007835s  max: 4.436831s  std: 0.071054s
+  CPU   mean: 0.014437s  medi: 0.009879s  min: 0.007835s  max: 4.096267s  std: 0.066297s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000050s  medi: 0.000044s  min: 0.000032s  max: 0.000077s  std: 0.000017s
+  CPU   mean: 0.000050s  medi: 0.000045s  min: 0.000033s  max: 0.000078s  std: 0.000017s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000035s  medi: 0.000034s  min: 0.000027s  max: 0.000043s  std: 0.000006s
+  CPU   mean: 0.000035s  medi: 0.000035s  min: 0.000027s  max: 0.000044s  std: 0.000006s
+HDF5Pump - process: 13.698s (CPU 13.357s) - finish: 0.003s (CPU 0.002s)
+  wall  mean: 0.002892s  medi: 0.001720s  min: 0.000987s  max: 4.383930s  std: 0.063686s
+  CPU   mean: 0.002820s  medi: 0.001720s  min: 0.000989s  max: 4.043414s  std: 0.058740s
+MCTimeCorrector - process: 15.172s (CPU 15.164s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.003204s  medi: 0.000570s  min: 0.000165s  max: 0.272372s  std: 0.012661s
+  CPU   mean: 0.003202s  medi: 0.000570s  min: 0.000166s  max: 0.272227s  std: 0.012652s
+TimePreproc - process: 0.638s (CPU 0.643s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000135s  medi: 0.000117s  min: 0.000099s  max: 0.001181s  std: 0.000065s
+  CPU   mean: 0.000136s  medi: 0.000118s  min: 0.000100s  max: 0.001185s  std: 0.000065s
+PointMaker - process: 6.799s (CPU 6.799s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001436s  medi: 0.001388s  min: 0.001296s  max: 0.003747s  std: 0.000225s
+  CPU   mean: 0.001436s  medi: 0.001388s  min: 0.001298s  max: 0.003752s  std: 0.000224s
+McInfoMaker - process: 4.909s (CPU 4.911s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001037s  medi: 0.001026s  min: 0.000952s  max: 0.001490s  std: 0.000042s
+  CPU   mean: 0.001037s  medi: 0.001027s  min: 0.000953s  max: 0.001492s  std: 0.000042s
+Keep - process: 0.148s (CPU 0.149s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000031s  medi: 0.000030s  min: 0.000026s  max: 0.000217s  std: 0.000005s
+  CPU   mean: 0.000032s  medi: 0.000030s  min: 0.000026s  max: 0.000218s  std: 0.000004s
+HDF5Sink - process: 29.094s (CPU 27.037s) - finish: 0.769s (CPU 0.768s)
+  wall  mean: 0.006143s  medi: 0.004900s  min: 0.004129s  max: 0.993794s  std: 0.026618s
+  CPU   mean: 0.005709s  medi: 0.004889s  min: 0.004129s  max: 0.932351s  std: 0.025908s
+Processing file: mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013532.jchain.aashower.203.root.h5
+Pipeline and module initialisation took 0.029s (CPU 0.009s).
+2023-09-17 16:20:24 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:20:24 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    5000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    6000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    7000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    8000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:22:43 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_numu-CCHEDIS_1e2-1e8GeV.sirene.jterbr00013532.jchain.aashower.203.root_dl.h5
+============================================================
+8756 cycles drained in 147.368209s (CPU 137.745853s). Memory peak: 588.14 MB
+  wall  mean: 0.016717s  medi: 0.010198s  min: 0.008037s  max: 8.706726s  std: 0.099359s
+  CPU   mean: 0.015622s  medi: 0.010169s  min: 0.008038s  max: 8.168301s  std: 0.093398s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000052s  medi: 0.000048s  min: 0.000033s  max: 0.000077s  std: 0.000017s
+  CPU   mean: 0.000053s  medi: 0.000049s  min: 0.000034s  max: 0.000078s  std: 0.000017s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000035s  medi: 0.000028s  min: 0.000026s  max: 0.000057s  std: 0.000011s
+  CPU   mean: 0.000036s  medi: 0.000029s  min: 0.000026s  max: 0.000057s  std: 0.000011s
+HDF5Pump - process: 26.960s (CPU 26.418s) - finish: 0.003s (CPU 0.003s)
+  wall  mean: 0.003079s  medi: 0.001725s  min: 0.000977s  max: 8.658277s  std: 0.092515s
+  CPU   mean: 0.003017s  medi: 0.001725s  min: 0.000979s  max: 8.119901s  std: 0.086763s
+MCTimeCorrector - process: 32.765s (CPU 32.741s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.003742s  medi: 0.000618s  min: 0.000144s  max: 0.228243s  std: 0.012541s
+  CPU   mean: 0.003739s  medi: 0.000619s  min: 0.000145s  max: 0.228078s  std: 0.012528s
+TimePreproc - process: 1.249s (CPU 1.258s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000143s  medi: 0.000120s  min: 0.000100s  max: 0.001185s  std: 0.000071s
+  CPU   mean: 0.000144s  medi: 0.000121s  min: 0.000101s  max: 0.001167s  std: 0.000071s
+PointMaker - process: 13.080s (CPU 13.078s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001494s  medi: 0.001401s  min: 0.001309s  max: 0.004756s  std: 0.000307s
+  CPU   mean: 0.001494s  medi: 0.001401s  min: 0.001310s  max: 0.004766s  std: 0.000306s
+McInfoMaker - process: 9.403s (CPU 9.404s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001074s  medi: 0.001041s  min: 0.000958s  max: 0.004020s  std: 0.000109s
+  CPU   mean: 0.001074s  medi: 0.001041s  min: 0.000960s  max: 0.004026s  std: 0.000109s
+Keep - process: 0.283s (CPU 0.286s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000032s  medi: 0.000031s  min: 0.000026s  max: 0.000246s  std: 0.000006s
+  CPU   mean: 0.000033s  medi: 0.000031s  min: 0.000027s  max: 0.000246s  std: 0.000006s
+HDF5Sink - process: 61.928s (CPU 52.992s) - finish: 0.934s (CPU 0.932s)
+  wall  mean: 0.007073s  medi: 0.004982s  min: 0.004211s  max: 1.158658s  std: 0.032306s
+  CPU   mean: 0.006052s  medi: 0.004977s  min: 0.004213s  max: 1.101812s  std: 0.030491s
+Processing file: mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014109.jchain.aashower.530.root.h5
+Pipeline and module initialisation took 0.047s (CPU 0.013s).
+2023-09-17 16:22:47 orcasong.modules.TimePreproc.TimePreproc: Centering time of Hits with first triggered hit
+2023-09-17 16:22:47 orcasong.modules.TimePreproc.TimePreproc: Centering time of McHits with first triggered hit
+--------------------------[ Blob    1000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    2000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    3000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+--------------------------[ Blob    4000 ]---------------------------
+---------------------[ Memory peak: 588.141 MB ]---------------------
+================================[ . ]================================
+2023-09-17 16:24:00 km3pipe.io.hdf5.HDF5Sink.HDF5Sink: HDF5 file written to: /sps/km3net/users/fcarenin/GNN/scripts/orcasong/mcv8.1.gsg_numu-NCHEDIS_1e2-1e8GeV.sirene.jterbr00014109.jchain.aashower.530.root_dl.h5
+============================================================
+4627 cycles drained in 77.160593s (CPU 70.302821s). Memory peak: 588.14 MB
+  wall  mean: 0.016523s  medi: 0.010220s  min: 0.008049s  max: 4.337123s  std: 0.075624s
+  CPU   mean: 0.015049s  medi: 0.010127s  min: 0.008015s  max: 4.029695s  std: 0.066731s
+StatusBar - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000041s  medi: 0.000039s  min: 0.000033s  max: 0.000052s  std: 0.000007s
+  CPU   mean: 0.000041s  medi: 0.000040s  min: 0.000033s  max: 0.000053s  std: 0.000008s
+MemoryObserver - process: 0.000s (CPU 0.000s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000028s  medi: 0.000026s  min: 0.000024s  max: 0.000037s  std: 0.000005s
+  CPU   mean: 0.000029s  medi: 0.000026s  min: 0.000025s  max: 0.000037s  std: 0.000005s
+HDF5Pump - process: 13.720s (CPU 13.412s) - finish: 0.003s (CPU 0.002s)
+  wall  mean: 0.002965s  medi: 0.001788s  min: 0.000980s  max: 4.282421s  std: 0.062948s
+  CPU   mean: 0.002899s  medi: 0.001784s  min: 0.000982s  max: 3.975043s  std: 0.058432s
+MCTimeCorrector - process: 16.049s (CPU 16.038s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.003468s  medi: 0.000588s  min: 0.000159s  max: 0.446354s  std: 0.016007s
+  CPU   mean: 0.003466s  medi: 0.000589s  min: 0.000160s  max: 0.446062s  std: 0.015994s
+TimePreproc - process: 0.642s (CPU 0.647s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000139s  medi: 0.000120s  min: 0.000097s  max: 0.001739s  std: 0.000079s
+  CPU   mean: 0.000140s  medi: 0.000121s  min: 0.000098s  max: 0.001743s  std: 0.000079s
+PointMaker - process: 6.893s (CPU 6.893s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001490s  medi: 0.001397s  min: 0.001292s  max: 0.004401s  std: 0.000277s
+  CPU   mean: 0.001490s  medi: 0.001396s  min: 0.001294s  max: 0.004406s  std: 0.000276s
+McInfoMaker - process: 4.969s (CPU 4.970s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.001074s  medi: 0.001029s  min: 0.000950s  max: 0.001958s  std: 0.000113s
+  CPU   mean: 0.001074s  medi: 0.001028s  min: 0.000951s  max: 0.001961s  std: 0.000112s
+Keep - process: 0.149s (CPU 0.151s) - finish: 0.000s (CPU 0.000s)
+  wall  mean: 0.000032s  medi: 0.000030s  min: 0.000026s  max: 0.000106s  std: 0.000005s
+  CPU   mean: 0.000033s  medi: 0.000031s  min: 0.000026s  max: 0.000069s  std: 0.000005s
+HDF5Sink - process: 33.665s (CPU 27.211s) - finish: 0.646s (CPU 0.645s)
+  wall  mean: 0.007276s  medi: 0.004956s  min: 0.004193s  max: 0.967439s  std: 0.036720s
+  CPU   mean: 0.005881s  medi: 0.004946s  min: 0.004195s  max: 0.875543s  std: 0.025358s
+slurmstepd: error: *** JOB 45032130 ON ccwslurm0342 CANCELLED AT 2023-09-17T16:26:52 ***
+****************************************************************
+*                      SLURM Batch System                      *
+*           IN2P3 Computing Centre, Villeurbanne FR            *
+****************************************************************
+Date: Sun Sep 17 16:26:52 CEST 2023
+Job informations can be found using these commands:
+Accounting:
+sacct -j 45032130
+Efficiency:
+seff 45032130
+****************************************************************

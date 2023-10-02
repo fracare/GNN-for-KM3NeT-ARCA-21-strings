@@ -1,0 +1,14 @@
+# These options define the various properties of a model.
+#
+# They overwrite the default values which are listed in the definition of the Configuration class.
+#
+[config]
+learning_rate = [0.003,0.001]
+train_logger_display=200 #number of batches after which the training performance is displayed
+train_logger_flush=-1
+verbose_train = 1 #0, 1 or 2
+batchsize = 32
+shuffle_train=true
+validate_interval=1		#number of files after which a validation is performed (and plotted)
+sample_modifier="GraphEdgeConv"
+label_modifier = {name='TSClassifier', is_cc_convention=2}

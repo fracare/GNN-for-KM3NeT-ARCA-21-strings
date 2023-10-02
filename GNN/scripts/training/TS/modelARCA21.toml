@@ -1,0 +1,24 @@
+# Info for building an OrcaNet model.
+
+[model]
+type = "DisjointEdgeConvBlock"
+next_neighbors = 16
+shortcut = true
+activation = 'relu'
+
+#standard particle net
+blocks = [
+    {units=[64, 64, 64], batchnorm_for_nodes=true},
+    {units=[128, 128, 128]},
+    {units=[256, 256, 256], pooling=true},
+    {type="OutputCateg", transition=false, output_name="ts_output", categories=2}
+]
+
+
+# ----------------------------------------------------------------------
+[compile]
+optimizer = "adam"
+#optimizer = "sgd"
+
+[compile.losses]
+ts_output = {function="categorical_crossentropy", metrics=['acc']}
